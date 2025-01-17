@@ -6,6 +6,7 @@ import ProgressBar from "@/components/progress-bar";
 import "react-toastify/dist/ReactToastify.min.css";
 import "nprogress/nprogress.css";
 import "@/styles/global.css";
+import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -60,6 +61,12 @@ export default function RootLayout({
           <ProgressBar />
           {children}
         </ThemeRegistry>
+
+        <Script
+          defer
+          src="https://umami-six-gold.vercel.app/script.js"
+          data-website-id="9b106c3b-aafb-46d4-aa5a-0613df6f5481"
+        />
       </body>
     </html>
   );
