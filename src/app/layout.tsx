@@ -62,11 +62,13 @@ export default function RootLayout({
           {children}
         </ThemeRegistry>
 
-        <Script
-          defer
-          src="https://umami-omega-eight.vercel.app/script.js"
-          data-website-id="85cc6356-7240-4e3f-b1a4-e1eefe473195"
-        />
+        {process.env.NODE_ENV !== 'development' && (
+          <Script
+            defer
+            src="https://umami-omega-eight.vercel.app/script.js"
+            data-website-id="85cc6356-7240-4e3f-b1a4-e1eefe473195"
+          />
+        )}
       </body>
     </html>
   );
