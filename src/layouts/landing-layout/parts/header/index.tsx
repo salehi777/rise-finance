@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import { StyledContent, StyledHeader } from "./styled";
+import { StyledContent, StyledGithub, StyledHeader } from "./styled";
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -65,6 +65,14 @@ export default function Header() {
           </StyledContent>
         </Container>
       </StyledHeader>
+
+      <StyledGithub
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/salehi777/rise-finance"
+      >
+        <Icon src="/icon/github.svg" />
+      </StyledGithub>
 
       <Drawer
         anchor="right"

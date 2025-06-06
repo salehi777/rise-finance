@@ -64,8 +64,8 @@ export default function RootLayout({
 
         <Script
           defer
-          src="https://umami-six-gold.vercel.app/script.js"
-          data-website-id="9b106c3b-aafb-46d4-aa5a-0613df6f5481"
+          src="https://umami-omega-eight.vercel.app/script.js"
+          data-website-id="85cc6356-7240-4e3f-b1a4-e1eefe473195"
         />
       </body>
     </html>

@@ -54,3 +54,23 @@ export const StyledContent = styled("div")(({ theme }) => ({
     },
   },
 }));
+
+export const StyledGithub = styled('a')(({ theme }) => ({
+  position: 'fixed',
+  top: 0,
+  right: 4,
+  height: theme.mixins.landing.header.height,
+  zIndex: theme.zIndex.appBar,
+  display: 'flex',
+  alignItems: 'center',
+  color: 'white',
+
+  '.icon': {
+    width: 32,
+    height: 32,
+  },
+
+  [theme.breakpoints.down('lg')]: {
+    display: 'none',
+  },
+}))
