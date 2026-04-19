@@ -15,37 +15,37 @@ import {
 } from './colors'
 
 const palette: PaletteOptions = {
-  primary: { main: blue[400], ...blue },
+  primary: { main: blue[500], ...blue },
   secondary,
   orange,
   success: {
-    main: emerald[400],
-    contrastText: '#000',
+    main: emerald[500],
+    contrastText: '#fff',
     ...emerald,
   },
-  error: { main: red[400], ...red },
+  error: { main: red[500], ...red },
   warning: {
-    main: amber[400],
-    contrastText: '#000',
+    main: amber[500],
+    contrastText: '#fff',
     ...amber,
   },
-  info: { main: indigo[400], ...indigo },
+  info: { main: indigo[500], ...indigo },
   gray: {
-    main: gray[500],
-    contrastText: '#000',
-    dark: gray[600],
+    main: gray[400],
+    contrastText: '#fff',
+    dark: gray[500],
     ...gray,
   },
   background: {
-    default: gray['A100'],
-    paper: gray[800],
+    default: gray[50],
+    paper: '#fff',
   },
   text: {
-    primary: gray[100],
-    secondary: gray[400],
-    disabled: gray[500],
+    primary: gray['A100'],
+    secondary: gray[500],
+    disabled: gray[400],
   },
-  divider: gray[700],
+  divider: gray[300],
 }
 
 export default palette
