@@ -1,0 +1,19 @@
+import { styled } from '@mui/material/styles'
+
+export const StyledLoading = styled('div')(({}) => ({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+
+  '>span': {
+    position: 'absolute',
+    width: '1px',
+    height: '1px',
+    padding: 0,
+    margin: '-1px',
+    overflow: 'hidden',
+    clip: 'rect(0, 0, 0, 0)',
+    whiteSpace: 'nowrap',
+    border: 0,
+  },
+}))

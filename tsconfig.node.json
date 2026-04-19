@@ -1,0 +1,26 @@
+{
+  "include": ["vite.config.ts"],
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "ES2024",
+    "lib": ["ES2024"],
+    "module": "ESNext",
+    "types": ["node"],
+    "skipLibCheck": true,
+    "strict": true,
+    "verbatimModuleSyntax": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "erasableSyntaxOnly": false,
+    "noFallthroughCasesInSwitch": false,
+    "noUncheckedSideEffectImports": false
+  }
+}
