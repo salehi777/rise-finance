@@ -5,18 +5,11 @@ export const StyledContent = styled('div')(({ theme }) => ({
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
+  ...theme.mixins.dashboard.fullPage,
 
-  h1: {
-    fontSize: 130,
-  },
+  h1: { fontSize: 130 },
 
-  div: {
-    fontSize: 22,
-    marginTop: 24,
-  },
+  div: { fontSize: 22, marginTop: 24 },
 
-  a: {
-    display: 'block',
-    marginTop: 48,
-  },
+  a: { display: 'block', marginTop: 48 },
 }))

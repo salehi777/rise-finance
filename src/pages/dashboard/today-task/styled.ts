@@ -6,9 +6,7 @@ export const StyledBox = styled('div')(({ theme }) => ({
   padding: '18px 18px',
   height: '100%',
 
-  [theme.breakpoints.down('md')]: {
-    padding: '12px 9px',
-  },
+  [theme.breakpoints.down('md')]: { padding: '12px 9px' },
 
   '>div:first-of-type': {
     display: 'flex',
@@ -18,8 +16,12 @@ export const StyledBox = styled('div')(({ theme }) => ({
   },
 
   '.MuiTabs-root': {
-    [theme.breakpoints.down('md')]: {
-      maxWidth: `calc(${theme.mixins.dashboard.helpers.getMainContentWidthMobile()} - 16px - 18px )`,
+    minHeight: 'unset',
+    '.MuiTab-root': {
+      padding: '10px 16px',
+      textTransform: 'none',
+      minHeight: 'unset',
+      minWidth: 'unset',
     },
   },
 

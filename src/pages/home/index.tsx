@@ -1,7 +1,7 @@
-import CaseStudySection from './parts/case-study-section'
-import ConsultingSection from './parts/consulting-section'
-import HeroSection from './parts/hero-section'
-import ProcessSection from './parts/process-section'
+import CaseStudySection from './case-study-section'
+import ConsultingSection from './consulting-section'
+import HeroSection from './hero-section'
+import ProcessSection from './process-section'
 
 export default function HomePage() {
   return (

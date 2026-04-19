@@ -36,13 +36,14 @@ export default function SignupPage() {
           name="password"
           label="Password"
           placeholder="Password"
-          rules={{ deps: ['confirm_password'] }}
+          rules={{ required: true, deps: ['confirm_password'] }}
         />
         <RHFPasswordInput
           name="confirm_password"
           label="Confirm Password"
           placeholder="Confirm Password"
           rules={{
+            required: true,
             validate: (value, formValues) =>
               value === formValues.password || 'Confirm password not matched',
           }}

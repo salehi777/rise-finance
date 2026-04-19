@@ -4,7 +4,26 @@ import { gray } from './colors'
 const components: Components = {
   MuiButton: {
     styleOverrides: {
-      root: { boxShadow: 'none !important', textTransform: 'unset' },
+      root: {
+        boxShadow: 'none !important',
+        textTransform: 'unset',
+        padding: '10px 24px',
+
+        '&[data-gradient]': {
+          border: '4px solid',
+          borderImageSlice: 1,
+          borderImageSource: 'linear-gradient(125deg, #812DE2, #3A49F9)',
+          color: 'white',
+          borderRadius: 0,
+          padding: '16px 65px',
+          fontSize: 18,
+          ['@media (max-width:599.95px)']: {
+            padding: '10px 45px',
+            fontSize: 16,
+            lineHeight: '22px',
+          },
+        },
+      },
     },
   },
   MuiIconButton: { styleOverrides: { root: { color: 'inherit', padding: 4 } } },

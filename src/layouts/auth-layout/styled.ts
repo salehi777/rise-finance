@@ -2,9 +2,9 @@ import { styled } from '@mui/material/styles'
 
 export const StyledLayout = styled('div')(({ theme }) => ({
   backgroundColor: '#121139',
-  minHeight: `calc(100vh - ${theme.mixins.landing.header.height}px)`,
   position: 'relative',
   overflow: 'hidden',
+  ...theme.mixins.landing.fullPage,
 
   display: 'flex',
   alignItems: 'center',

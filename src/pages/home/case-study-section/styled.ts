@@ -19,35 +19,12 @@ export const StyledWrapper = styled('div')(({ theme }) => ({
 
 export const StyledHead = styled('div')(({ theme }) => ({
   marginTop: 80,
-  div: {
-    textAlign: 'center',
-    fontSize: 50,
-    fontWeight: 600,
-    lineHeight: '100%',
-    textTransform: 'capitalize',
-    background: 'linear-gradient(263deg, #9130F4 21.05%, #4646F9 77.63%)',
-    backgroundClip: 'text',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-  },
-  p: {
-    textAlign: 'center',
-    fontSize: 22,
-    fontWeight: 500,
-    lineHeight: '130%',
-    margin: '40px auto 0',
-  },
+  textAlign: 'center',
+
+  h5: { margin: '40px auto 0' },
   [theme.breakpoints.down('md')]: {
     marginTop: 50,
-    div: {
-      fontSize: 32,
-      lineHeight: '80%',
-    },
-    p: {
-      fontSize: 17,
-      lineHeight: '115%',
-      margin: '30px auto 0',
-    },
+    h5: { margin: '30px auto 0' },
   },
 }))
 
@@ -74,40 +51,17 @@ export const StyledBox = styled('div')(({ theme }) => ({
   },
 
   '>div:first-of-type': {
-    span: {
-      fontSize: 30,
-      fontWeight: 600,
-      lineHeight: '100%',
-      textTransform: 'capitalize',
-    },
-    p: {
-      margin: '60px 0',
-      fontSize: 22,
-      fontWeight: 500,
-      lineHeight: '130%',
-    },
-    button: {
-      textTransform: 'uppercase',
-    },
+    span: { fontSize: 30, fontWeight: 600, lineHeight: '100%' },
+    p: { margin: '60px 0', fontSize: 22, fontWeight: 500, lineHeight: '130%' },
   },
 
-  [theme.breakpoints.down('xl')]: {
-    padding: '200px 110px 220px 55px',
-  },
-  [theme.breakpoints.down('lg')]: {
-    padding: '35px 40px',
-  },
+  [theme.breakpoints.down('xl')]: { padding: '200px 110px 220px 55px' },
+  [theme.breakpoints.down('lg')]: { padding: '35px 40px' },
   [theme.breakpoints.down('md')]: {
     padding: '35px 20px',
     '>div:first-of-type': {
-      span: {
-        fontSize: 22,
-      },
-      p: {
-        margin: '30px 0',
-        fontSize: 18,
-        lineHeight: '115%',
-      },
+      span: { fontSize: 22 },
+      p: { margin: '30px 0', fontSize: 18, lineHeight: '115%' },
     },
   },
 }))
@@ -142,9 +96,7 @@ export const StyledPhone = styled('div')(({ theme }) => ({
     },
   },
 
-  [theme.breakpoints.down('xl')]: {
-    transform: 'scale(.8)',
-  },
+  [theme.breakpoints.down('xl')]: { transform: 'scale(.8)' },
   [theme.breakpoints.down('lg')]: {
     left: 0,
     transform: 'scale(1)',

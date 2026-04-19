@@ -27,6 +27,9 @@ export default function Image({ ratio, ...props }: ImageProps) {
         e.currentTarget.onerror = null // prevents looping
         e.currentTarget.src = placeholder // shown if image fails
       }}
+      wrapperProps={{
+        style: { color: 'transparent', display: 'inline-flex' },
+      }}
       {...props}
     />
   )

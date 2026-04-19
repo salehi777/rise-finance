@@ -23,7 +23,7 @@ export const StyledBox = styled('div')(({ theme }) => ({
       '>div': {
         display: 'flex',
         alignItems: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: 'white',
         borderRadius: 50,
         padding: '8px 12px',
         fontSize: 14,

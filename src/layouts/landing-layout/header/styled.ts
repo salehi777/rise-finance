@@ -6,7 +6,7 @@ export const StyledHeader = styled('header')(({ theme }) => ({
   right: 0,
   height: theme.mixins.landing.header.height,
   zIndex: theme.zIndex.appBar,
-  color: '#fff',
+  color: 'white',
   backgroundColor: '#121139',
 
   '>div': { height: '100%' },
@@ -35,7 +35,7 @@ export const StyledGithub = styled('a')(({ theme }) => ({
   top: 4,
   right: 4,
   zIndex: theme.zIndex.appBar,
-  color: '#fff',
+  color: 'white',
 
   '.svg-box': { width: 32, height: 32 },
 

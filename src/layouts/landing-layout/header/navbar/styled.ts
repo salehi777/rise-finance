@@ -16,7 +16,8 @@ export const StyledNavbar = styled('nav')(({ theme }) => ({
 
     a: {
       display: 'block',
-      marginTop: (theme.mixins.landing.header.height - INITIAL_HEIGHT) / 2,
+      marginTop:
+        ((theme.mixins.landing.header.height as number) - INITIAL_HEIGHT) / 2,
       '>div': {
         display: 'flex',
         alignItems: 'center',

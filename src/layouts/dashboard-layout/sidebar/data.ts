@@ -6,22 +6,22 @@ const data = [
   },
   {
     label: 'projects',
-    path: 'projects',
+    path: '/projects',
     icon: 'briefcase',
   },
   {
     label: 'tasks',
-    path: 'tasks',
+    path: '/tasks',
     icon: 'task',
   },
   {
     label: 'tiem-log',
-    path: 'tiem-log',
+    path: '/tiem-log',
     icon: 'clock',
   },
   {
     label: 'settings',
-    path: 'settings',
+    path: '/settings',
     icon: 'settings',
   },
 ]

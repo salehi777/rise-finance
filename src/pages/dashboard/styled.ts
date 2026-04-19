@@ -1,5 +1,9 @@
 import { styled } from '@mui/material/styles'
 
+export const StyledWrapper = styled('div')(({ theme }) => ({
+  ...theme.mixins.dashboard.fullPage,
+}))
+
 export const StyledHead = styled('div')(({ theme }) => ({
   marginBottom: 24,
   display: 'flex',
@@ -9,7 +13,7 @@ export const StyledHead = styled('div')(({ theme }) => ({
   '>div': {
     display: 'flex',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     borderRadius: 50,
     padding: '8px 12px',
     fontSize: 14,
@@ -17,10 +21,7 @@ export const StyledHead = styled('div')(({ theme }) => ({
     '>span:last-of-type': {
       display: 'flex',
       marginLeft: 12,
-      '.svg-box': {
-        width: 16,
-        height: 16,
-      },
+      '.svg-box': { width: 16, height: 16 },
     },
   },
 
@@ -28,8 +29,6 @@ export const StyledHead = styled('div')(({ theme }) => ({
     marginBottom: 12,
     flexDirection: 'column',
     alignItems: 'flex-start',
-    '>div': {
-      marginTop: 8,
-    },
+    '>div': { marginTop: 8 },
   },
 }))

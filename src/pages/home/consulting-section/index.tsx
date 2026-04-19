@@ -1,8 +1,9 @@
 import Container from '@/components/ui/container'
 import { StyledBox, StyledChart, StyledHead } from './styled'
-import { Box, ButtonBase } from '@mui/material'
+import { Box, ButtonBase, Typography } from '@mui/material'
 import SvgBox from '@/components/ui/svg-box'
 import Image from '@/components/ui/image'
+import GradientText from '@/components/ui/gradient-text'
 
 export default function ConsultingSection() {
   return (
@@ -11,12 +12,14 @@ export default function ConsultingSection() {
         sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       >
         <StyledHead>
-          <div>consulting for startups in fintech</div>
-          <p>
+          <Typography variant="h3">
+            <GradientText>Consulting For Startups In Fintech</GradientText>
+          </Typography>
+          <Typography variant="h5">
             Our Team consists of proven experts from finance, tech and science.
             This mix makes it possible for our team to deliver the best results
             to all our clients.
-          </p>
+          </Typography>
         </StyledHead>
 
         <StyledBox>
@@ -26,9 +29,9 @@ export default function ConsultingSection() {
 
           <div>
             <span>Growth report</span>
-            <span>annual growth of our customers</span>
+            <span>Annual Growth Of Our Customers</span>
             <div>1,000% in Value</div>
-            <p>Success rate</p>
+            <p>Success Rate</p>
             <div>
               <svg viewBox="0 0 10 10">
                 <circle cx="5" cy="5" r="5" />

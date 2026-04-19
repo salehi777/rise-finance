@@ -2,7 +2,7 @@ import { StyledBox } from './styled'
 import { useMemo, useState } from 'react'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { Tab } from '@mui/material'
-import DashboardTasks from './parts/dashboard-tasks'
+import DashboardTasks from './dashboard-tasks'
 import { groupBy } from '@/lib/helpers'
 
 export default function TodayTask({ data }) {
@@ -10,12 +10,10 @@ export default function TodayTask({ data }) {
 
   const handleChange = (event, newValue: string) => setValue(newValue)
 
-  const grouped = useMemo(() => {
-    return groupBy(data || [], 'type')
-  }, [data])
+  const grouped = useMemo(() => groupBy(data || [], 'type'), [data])
 
   return (
-    <StyledBox>
+    <StyledBox sx={{ '>.MuiTabPanel-root': { p: 0 } }}>
       <div>
         <h3>Today Task</h3>
       </div>

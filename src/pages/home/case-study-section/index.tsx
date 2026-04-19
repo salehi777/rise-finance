@@ -1,15 +1,18 @@
 import Container from '@/components/ui/container'
 import { StyledBox, StyledHead, StyledPhone, StyledWrapper } from './styled'
-import { Box, Button } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 import Image from '@/components/ui/image'
+import GradientText from '@/components/ui/gradient-text'
 
 export default function CaseStudySection() {
   return (
     <StyledWrapper>
       <Container>
         <StyledHead>
-          <div>case Study</div>
-          <p>Some results from our clients</p>
+          <Typography variant="h3">
+            <GradientText>Case Study</GradientText>
+          </Typography>
+          <Typography variant="h5">Some Results From Our Clients</Typography>
         </StyledHead>
 
         <Box
@@ -28,9 +31,7 @@ export default function CaseStudySection() {
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua.
               </p>
-              <Button variant="outlined" size="large" color="secondary">
-                read more about this client
-              </Button>
+              <Button data-gradient>READ MORE ABOUT THIS CLIENT</Button>
             </div>
             <Image
               src="/images/logo-ipsum-1-big.png"

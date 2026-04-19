@@ -1,10 +1,13 @@
 import ButtonGroup from '@/components/ui/button-group'
 import { StyledLayout, StyledButtons } from './styled'
 import { ButtonBase } from '@mui/material'
-import { Link, Outlet, useLocation } from 'react-router'
+import { Link, Outlet, useLocation, useNavigate } from 'react-router'
 import { useEffect, useState } from 'react'
+import useAuthStore from '@/stores/useAuthStore'
 
 export default function AuthLayout() {
+  const user = useAuthStore((state) => state.user)
+  const navigate = useNavigate()
   const { pathname } = useLocation()
   const [activeIndex, setActiveIndex] = useState(-1)
 
@@ -12,6 +15,10 @@ export default function AuthLayout() {
     if (pathname.includes('login')) setActiveIndex(0)
     else setActiveIndex(1)
   }, [pathname])
+
+  useEffect(() => {
+    if (user) navigate('/dashboard')
+  }, [user])
 
   return (
     <StyledLayout>

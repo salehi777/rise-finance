@@ -10,20 +10,18 @@ export default function DashboardLayout() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (!user) {
-      navigate('/')
-    }
+    if (!user) navigate('/')
   }, [user])
 
   return (
-    <StyledLayout>
-      <Sidebar />
-      <div>
+    user && (
+      <StyledLayout>
+        <Sidebar />
         <Header />
         <main>
           <Outlet />
         </main>
-      </div>
-    </StyledLayout>
+      </StyledLayout>
+    )
   )
 }

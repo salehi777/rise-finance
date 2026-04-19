@@ -6,9 +6,7 @@ export const StyledBox = styled('div')(({ theme }) => ({
   padding: '18px 18px',
   height: '100%',
 
-  [theme.breakpoints.down('md')]: {
-    padding: '12px 9px',
-  },
+  [theme.breakpoints.down('md')]: { padding: '12px 9px' },
 
   '>div:first-of-type': {
     display: 'flex',
@@ -22,7 +20,7 @@ export const StyledBox = styled('div')(({ theme }) => ({
       '>div': {
         display: 'flex',
         alignItems: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: 'white',
         borderRadius: 50,
         padding: '8px 12px',
         fontSize: 14,
@@ -31,18 +29,13 @@ export const StyledBox = styled('div')(({ theme }) => ({
         '>span:last-of-type': {
           display: 'flex',
           marginLeft: 12,
-          span: {
-            width: 14,
-            height: 14,
-          },
+          span: { width: 14, height: 14 },
         },
       },
 
       [theme.breakpoints.down('md')]: {
         flexDirection: 'column',
-        '>div': {
-          marginTop: 6,
-        },
+        '>div': { marginTop: 6 },
       },
     },
   },
@@ -51,16 +44,9 @@ export const StyledBox = styled('div')(({ theme }) => ({
 export const StyledGrid = styled('div')(({ theme }) => ({
   display: 'grid',
   gridTemplateColumns: '1fr minmax(140px,1fr) 100px 90px 75px',
+  ...theme.mixins.scrollbar,
 
-  [theme.breakpoints.down('md')]: {
-    maxWidth: `calc(${theme.mixins.dashboard.helpers.getMainContentWidthMobile()} - 16px - 18px )`,
-    overflow: 'auto',
-  },
-
-  '>strong': {
-    borderBottom: '1px solid #9695a9',
-    padding: '0 4px 8px',
-  },
+  '>strong': { borderBottom: '1px solid #9695a9', padding: '0 4px 8px' },
 
   '>div': {
     padding: '16px 4px',
@@ -101,9 +87,7 @@ export const StyledGrid = styled('div')(({ theme }) => ({
         transform: 'translate(-50%, -50%)',
         width: 44,
         height: 44,
-        '.rc-progress-circle-trail': {
-          stroke: '#dfd7d3 !important',
-        },
+        '.rc-progress-circle-trail': { stroke: '#dfd7d3 !important' },
       },
       span: {
         position: 'absolute',

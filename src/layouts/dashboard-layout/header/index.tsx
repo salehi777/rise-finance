@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <>
-      <StyledHeader sidebar={sidebar}>
+      <StyledHeader data-sidebar={sidebar}>
         <h1>Dashboard</h1>
 
         <TextField placeholder="Search for anything..." />

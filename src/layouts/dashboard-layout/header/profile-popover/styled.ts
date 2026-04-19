@@ -22,18 +22,11 @@ export const StyledPopover = styled(Popover)(({ theme }) => ({
           '>span:first-of-type': {
             display: 'flex',
             marginRight: 12,
-            '.svg-box': {
-              width: 20,
-              height: 20,
-            },
+            '.svg-box': { width: 20, height: 20 },
           },
-          ':hover': {
-            backgroundColor: theme.palette.grey[100],
-          },
+          ':hover': { backgroundColor: theme.palette.grey[100] },
         },
-        '>button': {
-          color: theme.palette.error.main,
-        },
+        '>button': { color: theme.palette.error.main },
       },
     },
   },

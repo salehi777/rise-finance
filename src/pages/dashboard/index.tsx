@@ -1,6 +1,6 @@
 import { Grid, Skeleton } from '@mui/material'
 import StatisticsCard from './statistics-card'
-import { StyledHead } from './styled'
+import { StyledHead, StyledWrapper } from './styled'
 import SvgBox from '@/components/ui/svg-box'
 import ProjectSummary from './project-summary'
 import OverallProgress from './overall-progress'
@@ -12,7 +12,7 @@ export default function DashboardPage() {
   const data: any = {}
 
   return (
-    <div>
+    <StyledWrapper>
       <StyledHead>
         <h2>Overview</h2>
         <div>
@@ -24,7 +24,12 @@ export default function DashboardPage() {
       </StyledHead>
 
       {false ? (
-        <Grid container columnSpacing={2} rowSpacing={{ xs: 2, md: 4 }}>
+        <Grid
+          container
+          columnSpacing={2}
+          rowSpacing={{ xs: 2, md: 4 }}
+          sx={{ '.MuiSkeleton-root': { borderRadius: '16px' } }}
+        >
           <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
             <Skeleton height={200} />
           </Grid>
@@ -102,6 +107,6 @@ export default function DashboardPage() {
           </Grid>
         </Grid>
       )}
-    </div>
+    </StyledWrapper>
   )
 }
