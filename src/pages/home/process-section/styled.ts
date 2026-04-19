@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles'
 
-export const StyledWrapper = styled('div')(({ theme }) => ({
+export const StyledWrapper = styled('div')(({}) => ({
   backgroundColor: '#121139',
   position: 'relative',
   overflow: 'hidden',

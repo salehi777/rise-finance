@@ -10,7 +10,7 @@ export const StyledFooter = styled('footer')(({ theme }) => ({
   },
 }))
 
-export const StyledLogo = styled('div')(({ theme }) => ({
+export const StyledLogo = styled('div')(({}) => ({
   marginBottom: 31,
 }))
 

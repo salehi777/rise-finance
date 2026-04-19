@@ -11,9 +11,9 @@ const useAuthStore = create<AuthState>()(
   devtools(
     persist(
       (set) => ({
-        user: null,
+        user: false,
         login: () => set({ user: true }),
-        logout: () => set({ user: null }),
+        logout: () => set({ user: false }),
       }),
       { name: 'auth-store' },
     ),

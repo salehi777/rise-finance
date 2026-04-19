@@ -6,7 +6,7 @@ import ProjectSummary from './project-summary'
 import OverallProgress from './overall-progress'
 import TodayTask from './today-task'
 import ProjectsWorkload from './projects-workload'
-import { fCurrency } from '@/lib/format'
+import { fCurrency } from '@/lib/helpers'
 
 export default function DashboardPage() {
   const data: any = {}

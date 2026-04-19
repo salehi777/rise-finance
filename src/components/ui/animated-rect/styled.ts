@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles'
 import { animated } from '@react-spring/web'
 
-export const StyledCard = styled(animated.div)(({ theme }) => ({
+export const StyledCard = styled(animated.div)(({}) => ({
   willChange: 'transform',
   touchAction: 'none',
   width: 'fit-content',

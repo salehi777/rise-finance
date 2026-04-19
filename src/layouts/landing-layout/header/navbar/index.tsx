@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react'
 import useWindowResize from '@/hooks/useWindowResize'
-import { Box } from '@mui/material'
 import NavItem from './nav-item'
 import data from './data'
 import { StyledNavbar } from './styled'

@@ -1,7 +1,7 @@
 import { createAlova } from 'alova'
 import adapterFetch from 'alova/fetch'
 import ReactHook from 'alova/react'
-import toast from 'react-hot-toast'
+import { toast } from 'react-toastify'
 
 const parseResponse = async (response: Response) => {
   const data = await response.text()
@@ -31,7 +31,7 @@ const alova = createAlova({
       return data
     },
 
-    onError: (error) => {
+    onError: () => {
       toast.error('Failed to connect to server')
       throw new Error('Failed to connect to server')
     },

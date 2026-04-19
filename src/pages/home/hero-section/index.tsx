@@ -1,6 +1,6 @@
 import Container from '@/components/ui/container'
 import { StyledHero, StyledWrapper } from './styled'
-import { Box, Button, Grid, Typography } from '@mui/material'
+import { Button, Grid, Typography } from '@mui/material'
 import Image from '@/components/ui/image'
 import GradientText from '@/components/ui/gradient-text'
 import BigCard from './big-card'

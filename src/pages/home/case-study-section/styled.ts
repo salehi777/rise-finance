@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles'
 
-export const StyledWrapper = styled('div')(({ theme }) => ({
+export const StyledWrapper = styled('div')(({}) => ({
   position: 'relative',
   overflow: 'hidden',
   '&::before': {

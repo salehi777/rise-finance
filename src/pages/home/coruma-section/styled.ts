@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles'
 
-export const StyledWrapper = styled('div')(({ theme }) => ({
+export const StyledWrapper = styled('div')(({}) => ({
   backgroundColor: '#121139',
   position: 'relative',
   overflow: 'hidden',
@@ -17,7 +17,7 @@ export const StyledWrapper = styled('div')(({ theme }) => ({
   '&::after': { width: '50%', height: '100%', right: '-25%', top: '-50%' },
 }))
 
-export const StyledHead = styled('div')(({ theme }) => ({
+export const StyledHead = styled('div')(({}) => ({
   margin: '80px 0',
   textAlign: 'center',
   h5: { margin: '40px auto 0', maxWidth: 911 },

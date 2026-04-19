@@ -8,7 +8,7 @@ import { groupBy } from '@/lib/helpers'
 export default function TodayTask({ data }) {
   const [value, setValue] = useState('all')
 
-  const handleChange = (event, newValue: string) => setValue(newValue)
+  const handleChange = (_, newValue: string) => setValue(newValue)
 
   const grouped = useMemo(() => groupBy(data || [], 'type'), [data])
 

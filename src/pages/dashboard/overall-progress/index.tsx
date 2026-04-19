@@ -2,7 +2,6 @@ import SvgBox from '@/components/ui/svg-box'
 import { StyledBox, StyledCounts, StyledGauge } from './styled'
 import { Circle } from 'rc-progress'
 import { Box, useTheme } from '@mui/material'
-import { fPercent } from '@/lib/format'
 
 export default function OverallProgress({ data }) {
   const { palette } = useTheme()
@@ -62,9 +61,7 @@ export default function OverallProgress({ data }) {
               </span>
             </div>
             <div>
-              <div>
-                {fPercent((data?.completed * 100) / data?.total_projects)}
-              </div>
+              <div>{(data?.completed * 100) / data?.total_projects}%</div>
               <span>Completed</span>
             </div>
           </div>
