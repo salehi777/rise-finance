@@ -17,7 +17,7 @@ const components: Components = {
           borderRadius: 0,
           padding: '16px 65px',
           fontSize: 18,
-          ['@media (max-width:599.95px)']: {
+          ['@media (max-width:899.95px)']: {
             padding: '10px 45px',
             fontSize: 16,
             lineHeight: '22px',

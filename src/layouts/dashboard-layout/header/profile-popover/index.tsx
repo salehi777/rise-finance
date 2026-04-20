@@ -3,7 +3,15 @@ import { StyledPopover } from './styled'
 import SvgBox from '@/components/ui/svg-box'
 import useAuthStore from '@/stores/useAuthStore'
 
-export default function ProfilePopover({ anchorEl, handleClose }) {
+interface ProfilePopoverProps {
+  anchorEl: HTMLDivElement | null
+  handleClose: () => void
+}
+
+export default function ProfilePopover({
+  anchorEl,
+  handleClose,
+}: ProfilePopoverProps) {
   const logout = useAuthStore((state) => state.logout)
 
   return (

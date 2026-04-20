@@ -7,8 +7,7 @@ import useAuthStore from '@/stores/useAuthStore'
 import useSettingsStore from '@/stores/useSettingsStore'
 
 export default function Header() {
-  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null)
-  const handleOpen = (event) => setAnchorEl(event.currentTarget)
+  const [anchorEl, setAnchorEl] = useState<HTMLDivElement | null>(null)
   const handleClose = () => setAnchorEl(null)
   const user = useAuthStore((state) => state.user)
   const sidebar = useSettingsStore((state) => state.sidebar)
@@ -20,7 +19,7 @@ export default function Header() {
 
         <TextField placeholder="Search for anything..." />
 
-        <div onClick={handleOpen}>
+        <div onClick={(e) => setAnchorEl(e.currentTarget)}>
           <Avatar src="/" />
           <div>
             <div>{user?.full_name}</div>

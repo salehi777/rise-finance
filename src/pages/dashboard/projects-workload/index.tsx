@@ -2,9 +2,9 @@ import SvgBox from '@/components/ui/svg-box'
 import { StyledBox, StyledWorks } from './styled'
 import { useMemo } from 'react'
 
-export default function ProjectsWorkload({ data }) {
+export default function ProjectsWorkload({ data }: any) {
   const max = useMemo(() => {
-    const counts = data?.map(({ count }) => count) || []
+    const counts = data?.map(({ count }: any) => count) || []
     return Math.max(...counts)
   }, [data])
 
@@ -23,7 +23,7 @@ export default function ProjectsWorkload({ data }) {
       </div>
 
       <StyledWorks>
-        {data?.map((item) => (
+        {data?.map((item: any) => (
           <div key={item.user}>
             <div>{item.user}</div>
             <div data-max={item.count === max}>

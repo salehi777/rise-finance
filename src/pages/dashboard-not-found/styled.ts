@@ -1,11 +1,10 @@
 import { styled } from '@mui/material/styles'
 
-export const StyledContent = styled('div')(({ theme }) => ({
+export const StyledContent = styled('div')(({}) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  ...theme.mixins.dashboard.fullPage,
 
   h1: { fontSize: 130 },
 

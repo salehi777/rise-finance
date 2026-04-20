@@ -29,54 +29,59 @@ export const StyledSmallCard = styled(AnimatedRect)(({ theme }) => ({
     height: '100%',
     padding: '28px 25px 36px',
     fontWeight: 500,
-    '>span:first-of-type': {
-      marginBottom: 'auto',
-      position: 'relative',
-      width: 66,
-      height: 40,
+    '>span': {
+      img: { width: 66, height: 40 },
     },
-    '>span:last-of-type': { fontSize: 12, opacity: 0.5 },
     '>div:first-of-type': {
-      marginTop: 10,
+      flex: 1,
       display: 'flex',
-      alignItems: 'center',
-      fontSize: 13,
-      div: {
-        marginRight: 12,
-        span: {
-          marginRight: 9,
-          width: 6,
-          height: 6,
-          display: 'inline-block',
-          backgroundColor: 'white',
-          borderRadius: 6,
-        },
+      flexDirection: 'column',
+      justifyContent: 'center',
+      '>span': { fontSize: 12, opacity: 0.5 },
+      '>div': {
+        marginTop: 10,
+        display: 'flex',
+        alignItems: 'center',
+        fontSize: 13,
+        svg: { marginRight: 18 },
       },
     },
     '>div:last-of-type': {
-      marginTop: 32,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      div: { position: 'relative', width: 48, height: 32 },
-      span: { fontSize: 11 },
+      fontSize: 11,
+      img: { width: 48, height: 32 },
     },
   },
 
-  [theme.breakpoints.down('xl')]: { width: 214 * 0.8, height: 266 * 0.8 },
+  [theme.breakpoints.down('xl')]: {
+    width: 214 * 0.8,
+    height: 266 * 0.8,
+  },
 
   [theme.breakpoints.down('lg')]: {
     width: 214 * 0.65,
     height: 266 * 0.65,
     '>div': {
       padding: '16px 16px',
-      '>span:first-of-type': { width: 66 * 0.75, height: 40 * 0.75 },
-      '>span:last-of-type': { fontSize: 11 },
-      '>div:first-of-type': {
-        fontSize: 11,
-        'span:first-of-type': { svg: { marginRight: 4, width: 5, height: 5 } },
+      '>span': {
+        img: { width: 66 * 0.75, height: 40 * 0.75 },
       },
-      '>div:last-of-type': { div: { width: 48 * 0.75, height: 32 * 0.75 } },
+      '>div:first-of-type': {
+        '>span': { fontSize: 11 },
+        '>div': { marginTop: 4, fontSize: 11 },
+      },
+      '>div:last-of-type': {
+        img: { width: 48 * 0.75, height: 32 * 0.75 },
+      },
     },
+  },
+
+  [theme.breakpoints.down('sm')]: {
+    width: 214 * 0.61,
+    height: 266 * 0.61,
+    bottom: '-35%',
+    right: '4%',
   },
 }))

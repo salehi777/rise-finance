@@ -5,7 +5,7 @@ import { Box, type BoxProps } from '@mui/material'
 interface ButtonGroupProps {
   items: BoxProps[]
   activeIndex: number
-  setActiveIndex?: (number) => {}
+  setActiveIndex?: (idx: number) => void
 }
 
 export default function ButtonGroup({

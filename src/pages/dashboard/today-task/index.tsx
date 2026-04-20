@@ -5,10 +5,8 @@ import { Tab } from '@mui/material'
 import DashboardTasks from './dashboard-tasks'
 import { groupBy } from '@/lib/helpers'
 
-export default function TodayTask({ data }) {
+export default function TodayTask({ data }: any) {
   const [value, setValue] = useState('all')
-
-  const handleChange = (_, newValue: string) => setValue(newValue)
 
   const grouped = useMemo(() => groupBy(data || [], 'type'), [data])
 
@@ -20,7 +18,7 @@ export default function TodayTask({ data }) {
 
       <TabContext value={value}>
         <TabList
-          onChange={handleChange}
+          onChange={(_, newValue: string) => setValue(newValue)}
           sx={{ borderBottom: '1px solid #9695a9' }}
           variant="scrollable"
         >

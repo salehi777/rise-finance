@@ -1,9 +1,5 @@
 import { styled } from '@mui/material/styles'
 
-export const StyledWrapper = styled('div')(({ theme }) => ({
-  ...theme.mixins.dashboard.fullPage,
-}))
-
 export const StyledHead = styled('div')(({ theme }) => ({
   marginBottom: 24,
   display: 'flex',

@@ -22,21 +22,21 @@ const mixins: MixinsOptions = {
     header: { height: 90 },
     sidebar: { width_open: 260, width_close: 81 },
     main: {
-      padding_desktop: `${90 + 24}px 32px 24px`,
-      padding_mobile: `${90 + 12}px 12px 12px`,
+      padding_desktop: `${90 + 24}px 32px 48px`,
+      padding_mobile: `${90 + 12}px 12px 24px`,
     },
-    fullPage: {
-      minHeight: `calc(100vh - 90px - ${24 * 2}px)`,
-      '@supports (height: 100dvh)': {
-        minHeight: `calc(100dvh - 90px - ${24 * 2}px)`,
-      },
-      '@media (max-width:899.9px)': {
-        minHeight: `calc(100vh - 90px - ${12 * 2}px)`,
-        '@supports (height: 100dvh)': {
-          minHeight: `calc(100dvh - 90px - ${12 * 2}px)`,
-        },
-      },
-    },
+    // fullPage: {
+    //   minHeight: `calc(100vh - 90px - 24px - 48px)`,
+    //   '@supports (height: 100dvh)': {
+    //     minHeight: `calc(100dvh - 90px - 24px - 48px)`,
+    //   },
+    //   '@media (max-width:899.9px)': {
+    //     minHeight: `calc(100vh - 90px - 12px - 24px)`,
+    //     '@supports (height: 100dvh)': {
+    //       minHeight: `calc(100dvh - 90px - 12px - 24px)`,
+    //     },
+    //   },
+    // },
   },
 }
 
@@ -55,7 +55,7 @@ declare module '@mui/material/styles' {
       header: CSSObject
       sidebar: { width_open: number; width_close: number }
       main: { padding_desktop: string; padding_mobile: string }
-      fullPage: CSSObject
+      // fullPage: CSSObject
     }
   }
 }

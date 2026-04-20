@@ -1,18 +1,23 @@
 import { Grid, Skeleton } from '@mui/material'
 import StatisticsCard from './statistics-card'
-import { StyledHead, StyledWrapper } from './styled'
+import { StyledHead } from './styled'
 import SvgBox from '@/components/ui/svg-box'
 import ProjectSummary from './project-summary'
 import OverallProgress from './overall-progress'
 import TodayTask from './today-task'
 import ProjectsWorkload from './projects-workload'
 import { fCurrency } from '@/lib/helpers'
+import { useRequest } from 'alova/client'
+import alova from '@/lib/alova'
 
 export default function DashboardPage() {
-  const data: any = {}
+  // const { loading, data } = useRequest<any, any>(() =>
+  //   alova.Get('sample/rise?delay=1000'),
+  // )
+  const [loading, data]: any = [false, null]
 
   return (
-    <StyledWrapper>
+    <div>
       <StyledHead>
         <h2>Overview</h2>
         <div>
@@ -23,7 +28,7 @@ export default function DashboardPage() {
         </div>
       </StyledHead>
 
-      {false ? (
+      {loading ? (
         <Grid
           container
           columnSpacing={2}
@@ -107,6 +112,6 @@ export default function DashboardPage() {
           </Grid>
         </Grid>
       )}
-    </StyledWrapper>
+    </div>
   )
 }

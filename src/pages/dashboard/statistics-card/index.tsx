@@ -2,7 +2,21 @@ import { Box } from '@mui/material'
 import { StyledCard } from './styled'
 import SvgBox from '@/components/ui/svg-box'
 
-export default function StatisticsCard({ icon, color, title, value, percent }) {
+interface StatisticsCardProps {
+  icon: string
+  color: string
+  title: string
+  value: string | number
+  percent: number
+}
+
+export default function StatisticsCard({
+  icon,
+  color,
+  title,
+  value,
+  percent,
+}: StatisticsCardProps) {
   return (
     <StyledCard>
       <Box sx={{ backgroundColor: color }}>

@@ -15,31 +15,39 @@ export const StyledWrapper = styled('div')(({ theme }) => ({
   '&::before': { width: '50%', height: '80%', left: '-25%', bottom: '-40%' },
   '&::after': { width: '30%', height: '50%', right: '-15%', top: '-25%' },
 
-  [theme.breakpoints.down('md')]: { paddingTop: 32 },
-
   '>div': {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-evenly',
+    gap: 175,
+    justifyContent: 'center',
     ...theme.mixins.landing.fullPage,
+  },
+
+  [theme.breakpoints.down('lg')]: {
+    '>div': {
+      gap: 110,
+    },
   },
 }))
 
-export const StyledHero = styled('div')(({ theme }) => ({
+export const StyledContent = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   color: 'white',
   gap: 40,
 
-  '>div:last-of-type': {
-    position: 'relative',
+  '>div:first-of-type': {
+    h5: { margin: '26px 0 38px' },
   },
+
+  '>div:last-of-type': { position: 'relative' },
 
   [theme.breakpoints.down('md')]: {
     flexDirection: 'column',
 
     '>div:first-of-type': {
       textAlign: 'center',
+      h5: { margin: '26px 0' },
     },
   },
 }))

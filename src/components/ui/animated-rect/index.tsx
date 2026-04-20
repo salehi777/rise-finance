@@ -1,9 +1,19 @@
 import { useRef } from 'react'
-import { useSpring } from '@react-spring/web'
+import { useSpring, type AnimatedComponent } from '@react-spring/web'
 import { useGesture } from '@use-gesture/react'
 import { StyledCard } from './styled'
 
-export default function AnimatedRect({ children, ratio = 20, ...props }) {
+interface AnimatedRectProps extends React.ComponentProps<
+  AnimatedComponent<'div'>
+> {
+  ratio?: number
+}
+
+export default function AnimatedRect({
+  children,
+  ratio = 20,
+  ...props
+}: AnimatedRectProps) {
   const target = useRef(null)
   const [{ rotateX, rotateY }, api] = useSpring(() => ({
     rotateX: 0,

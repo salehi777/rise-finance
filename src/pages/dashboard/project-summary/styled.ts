@@ -59,6 +59,7 @@ export const StyledGrid = styled('div')(({ theme }) => ({
         borderRadius: 50,
         fontSize: 13,
         padding: '4px 8px',
+        textTransform: 'capitalize',
         '&[data-status=completed]': {
           color: theme.palette.success.main,
           backgroundColor: alpha(theme.palette.success.main, 0.2),

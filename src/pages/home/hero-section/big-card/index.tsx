@@ -9,15 +9,14 @@ export default function BigCard() {
         alt="Mastercard"
         sizes="(max-width: 900px) 100vw, 50vw"
       />
+
       <div>
         <div>
           <div>
             <span>Current Balance</span>
-            <span>$5,750,20</span>
+            <span>$5,750.20</span>
           </div>
-          <div>
-            <Image src="/images/mastercard-logo.png" alt="Mastercard Logo" />
-          </div>
+          <Image src="/images/mastercard-logo.png" alt="Mastercard Logo" />
         </div>
         <span>5282 3456 7890 1289</span>
       </div>

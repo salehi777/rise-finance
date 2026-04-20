@@ -17,10 +17,12 @@ export default function DashboardLayout() {
     user && (
       <StyledLayout>
         <Sidebar />
-        <Header />
-        <main>
-          <Outlet />
-        </main>
+        <div>
+          <Header />
+          <main>
+            <Outlet />
+          </main>
+        </div>
       </StyledLayout>
     )
   )

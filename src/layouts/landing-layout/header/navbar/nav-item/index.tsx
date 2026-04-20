@@ -9,7 +9,17 @@ import { useRef, useState } from 'react'
 
 export const INITIAL_HEIGHT = 45
 
-export default function NavItem({ dockHovered, dockWidth, children }) {
+interface NavItemProps {
+  dockHovered: boolean
+  dockWidth: number
+  children: React.ReactNode
+}
+
+export default function NavItem({
+  dockHovered,
+  dockWidth,
+  children,
+}: NavItemProps) {
   const cardRef = useRef<HTMLDivElement>(null!)
   const [elem, setElem] = useState({ centerX: 0, width: 0 })
   // initial min width of smallest item

@@ -30,38 +30,40 @@ export const StyledBigCard = styled(AnimatedRect)(({ theme }) => ({
     '>div': {
       display: 'flex',
       justifyContent: 'space-between',
-      '>div:first-of-type': {
-        'span:first-of-type': {
-          fontSize: 14,
-          fontWeight: 500,
-          opacity: 0.54,
-          display: 'block',
-        },
-        'span:last-of-type': {
-          fontSize: 28,
-          fontWeight: 500,
-          display: 'block',
-          marginTop: 17,
-        },
+      '>div': {
+        span: { fontWeight: 500, display: 'block' },
+        'span:first-of-type': { fontSize: 14, opacity: 0.54 },
+        'span:last-of-type': { fontSize: 28, marginTop: 17 },
       },
-      '>div:last-of-type': { position: 'relative', width: 87, height: 68 },
+
+      img: { width: 87, height: 68 },
     },
   },
 
-  [theme.breakpoints.down('xl')]: { width: 609 * 0.8, height: 350 * 0.8 },
+  [theme.breakpoints.down('xl')]: {
+    width: 609 * 0.8,
+    height: 350 * 0.8,
+  },
 
   [theme.breakpoints.down('lg')]: {
     width: 609 * 0.65,
     height: 350 * 0.65,
+
     '>div': {
       padding: '20px 20px',
       '>div': {
-        '>div:first-of-type': {
+        '>div': {
           'span:first-of-type': { fontSize: 12 },
           'span:last-of-type': { fontSize: 24 },
         },
-        '>div:last-of-type': { width: (50 * 87) / 68, height: 50 },
+
+        img: { width: (50 * 87) / 68, height: 50 },
       },
     },
+  },
+
+  [theme.breakpoints.down('sm')]: {
+    width: 609 * 0.55,
+    height: 350 * 0.55,
   },
 }))

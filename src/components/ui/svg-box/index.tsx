@@ -5,18 +5,13 @@ interface SvgBoxProps extends BoxProps {
   alt?: string
 }
 
-export default function SvgBox({
-  src,
-  component,
-  style,
-  ...props
-}: SvgBoxProps) {
+export default function SvgBox({ src, component, sx, ...props }: SvgBoxProps) {
   return (
     <Box
       component={component || 'span'}
       className="svg-box"
       {...(component === 'img' ? { src } : {})}
-      style={{
+      sx={{
         width: 24,
         height: 24,
         flexShrink: 0,
@@ -28,7 +23,7 @@ export default function SvgBox({
               backgroundColor: 'currentColor',
             }
           : {}),
-        ...style,
+        ...sx,
       }}
       {...props}
     />

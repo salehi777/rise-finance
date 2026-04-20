@@ -1,10 +1,10 @@
 import SvgBox from '@/components/ui/svg-box'
 import { StyledRow } from './styled'
 
-export default function DashboardTasks({ data }) {
+export default function DashboardTasks({ data }: any) {
   return (
     <StyledRow>
-      {data?.map((item) => (
+      {data?.map((item: any) => (
         <div key={item.id}>
           <p>
             <span>

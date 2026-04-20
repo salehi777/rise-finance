@@ -10,22 +10,21 @@ export default function SmallCard() {
         sizes="(max-width: 900px) 50vw, 25vw"
       />
       <div>
-        <span>
-          <Image src="/images/mastercard-logo-2.png" alt="Mastercard Logo" />
-        </span>
-        <span>Credit Card</span>
+        <Image src="/images/mastercard-logo-2.png" alt="Mastercard Logo" />
         <div>
+          <span>Credit Card</span>
           <div>
-            {[1, 2, 3, 4].map((i) => (
-              <span key={i} />
-            ))}
+            <svg width="51" height="6" viewBox="0 0 51 6" fill="white">
+              <circle cx="3" cy="3" r="3" />
+              <circle cx="18" cy="3" r="3" />
+              <circle cx="33" cy="3" r="3" />
+              <circle cx="48" cy="3" r="3" />
+            </svg>
+            <span>1289</span>
           </div>
-          <span>1289</span>
         </div>
         <div>
-          <div>
-            <Image src="/images/chip.png" alt="Mastercard Logo" />
-          </div>
+          <Image src="/images/chip.png" alt="Mastercard Logo" />
           <span>09/25</span>
         </div>
       </div>

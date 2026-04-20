@@ -1,5 +1,5 @@
 import Container from '@/components/ui/container'
-import { StyledHero, StyledWrapper } from './styled'
+import { StyledContent, StyledWrapper } from './styled'
 import { Button, Grid, Typography } from '@mui/material'
 import Image from '@/components/ui/image'
 import GradientText from '@/components/ui/gradient-text'
@@ -10,13 +10,13 @@ export default function HeroSection() {
   return (
     <StyledWrapper>
       <Container>
-        <StyledHero>
+        <StyledContent>
           <div>
             <Typography variant="h1">
               <GradientText>Scale Fintech</GradientText>
               <div>Safe And Secure</div>
             </Typography>
-            <Typography variant="h5" m="26px 0 38px">
+            <Typography variant="h5">
               Ship your fintech products to your customers with fast and
               reliable processes. Secure and highly customizable. Rise Finance
               is the best partner for you if you want to scale your finance
@@ -29,14 +29,14 @@ export default function HeroSection() {
             <BigCard />
             <SmallCard />
           </div>
-        </StyledHero>
+        </StyledContent>
 
         <Grid
           container
           textAlign="center"
           alignItems="center"
           spacing={4}
-          sx={{ mt: { xs: 12, md: 0 }, mb: { xs: 8, md: 0 } }}
+          mb={{ xs: 7, md: 4 }}
         >
           {[
             'logo-ipsum-1.png',

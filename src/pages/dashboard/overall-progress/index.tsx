@@ -3,7 +3,7 @@ import { StyledBox, StyledCounts, StyledGauge } from './styled'
 import { Circle } from 'rc-progress'
 import { Box, useTheme } from '@mui/material'
 
-export default function OverallProgress({ data }) {
+export default function OverallProgress({ data }: any) {
   const { palette } = useTheme()
 
   return (
@@ -38,10 +38,7 @@ export default function OverallProgress({ data }) {
               percent={0}
               strokeWidth={5}
               gapDegree={180}
-              steps={{
-                count: 60,
-                space: 2,
-              }}
+              steps={{ count: 60, gap: 2 }}
             />
             <div>
               <span>
@@ -61,7 +58,12 @@ export default function OverallProgress({ data }) {
               </span>
             </div>
             <div>
-              <div>{(data?.completed * 100) / data?.total_projects}%</div>
+              <div>
+                {parseFloat(
+                  ((data?.completed * 100) / data?.total_projects).toFixed(2),
+                ) || ''}
+                %
+              </div>
               <span>Completed</span>
             </div>
           </div>

@@ -3,7 +3,7 @@ import { StyledBox, StyledGrid } from './styled'
 import React from 'react'
 import { Circle } from 'rc-progress'
 
-export default function ProjectSummary({ data }) {
+export default function ProjectSummary({ data }: any) {
   return (
     <StyledBox>
       <div>
@@ -26,7 +26,7 @@ export default function ProjectSummary({ data }) {
         <strong>Status</strong>
         <strong>Progress</strong>
 
-        {data?.map((item) => (
+        {data?.map((item: any) => (
           <React.Fragment key={item.id}>
             <div>{item.name}</div>
             <div>{item.project_manager}</div>

@@ -1,5 +1,4 @@
 import { StyledContent, StyledGithub, StyledHeader } from './styled'
-import { useState } from 'react'
 import { Button, Drawer, IconButton, useMediaQuery } from '@mui/material'
 import SvgBox from '@/components/ui/svg-box'
 import { Link } from 'react-router'
@@ -7,9 +6,10 @@ import Container from '@/components/ui/container'
 import Image from '@/components/ui/image'
 import Navbar from './navbar'
 import useAuthStore from '@/stores/useAuthStore'
+import { useModal } from '@/hooks/useModal'
 
 export default function Header() {
-  const [openDrawer, setOpenDrawer] = useState(false)
+  const { isOpen, toggleModal: toggleDrawer } = useModal()
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down('md'))
   const user = useAuthStore((state) => state.user)
 
@@ -20,7 +20,7 @@ export default function Header() {
           <StyledContent>
             {isMobile && (
               <IconButton
-                onClick={() => setOpenDrawer(true)}
+                onClick={() => toggleDrawer()}
                 aria-label="Open Drawer"
               >
                 <SvgBox src="/icons/menu.svg" />
@@ -68,8 +68,8 @@ export default function Header() {
 
       <Drawer
         anchor="right"
-        open={openDrawer}
-        onClose={() => setOpenDrawer(false)}
+        open={isOpen}
+        onClose={() => toggleDrawer()}
         PaperProps={{ sx: { minWidth: 200 } }}
       >
         <div>drawer</div>
