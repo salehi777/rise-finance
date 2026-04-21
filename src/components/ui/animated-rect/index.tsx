@@ -31,9 +31,10 @@ export default function AnimatedRect({
         const rotateY = (offsetX / width - 0.5) * -ratio
         const rotateX = (offsetY / height - 0.5) * ratio
 
-        api({ rotateY, rotateX })
+        api.start({ rotateY, rotateX })
       },
-      onHover: ({ hovering }) => !hovering && api({ rotateX: 0, rotateY: 0 }),
+      onHover: ({ hovering }) =>
+        !hovering && api.start({ rotateX: 0, rotateY: 0 }),
     },
     { target, eventOptions: { passive: false } },
   )

@@ -22,11 +22,5 @@ export default function useMousePosition(
     }
   }, [api])
 
-  return useMemo(
-    () => ({
-      x,
-      y,
-    }),
-    [x, y],
-  )
+  return useMemo(() => ({ x, y }), [x, y])
 }

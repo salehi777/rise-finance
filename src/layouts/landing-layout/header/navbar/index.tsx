@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react'
 import useWindowResize from '@/hooks/useWindowResize'
 import NavItem from './nav-item'
-import data from './data'
 import { StyledNavbar } from './styled'
 import { Link, useLocation } from 'react-router'
 
@@ -22,7 +21,13 @@ export default function Navbar() {
         onMouseOver={() => setDockHovered(true)}
         onMouseOut={() => setDockHovered(false)}
       >
-        {data.map((item) => (
+        {[
+          { label: 'About', path: '/about' },
+          { label: 'Blog', path: '/blog' },
+          { label: 'Guide', path: '/guide' },
+          { label: 'Press', path: '/press' },
+          { label: 'Partners', path: '/partners' },
+        ].map((item) => (
           <li key={item.label}>
             <Link to={item.path} data-active={item.path === pathname}>
               <NavItem dockHovered={dockHovered} dockWidth={dockWidth}>

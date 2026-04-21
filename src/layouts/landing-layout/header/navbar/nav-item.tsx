@@ -22,8 +22,8 @@ export default function NavItem({
 }: NavItemProps) {
   const cardRef = useRef<HTMLDivElement>(null!)
   const [elem, setElem] = useState({ centerX: 0, width: 0 })
-  // initial min width of smallest item
-  const minWidth = useSpringValue(85, {
+
+  const minWidth = useSpringValue(0, {
     config: { mass: 0.1, tension: 320 },
   })
   const minHeight = useSpringValue(INITIAL_HEIGHT, {
