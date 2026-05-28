@@ -11,10 +11,9 @@ import { useRequest } from 'alova/client'
 import alova from '@/lib/alova'
 
 export default function DashboardPage() {
-  // const { loading, data } = useRequest<any, any>(() =>
-  //   alova.Get('sample/rise?delay=1000'),
-  // )
-  const [loading, data]: any = [false, null]
+  const { loading, data } = useRequest<any, any>(() =>
+    alova.Get('sample/rise-finance?delay=1000'),
+  )
 
   return (
     <div>
