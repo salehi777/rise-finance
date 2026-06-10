@@ -53,12 +53,26 @@
     <link rel="apple-touch-icon" href="/pwa-assets/apple-icon-180.png" />
 
     <!-- font -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
-    /> -->
+    />
+
+    <!-- umami analytics -->
+    <script>
+      if (
+        !window.location.hostname.includes('localhost') &&
+        !window.location.hostname.includes('127.0.0.1')
+      ) {
+        const script = document.createElement('script')
+        script.defer = true
+        script.src = 'https://umami-seven-nu-37.vercel.app/script.js'
+        script.dataset.websiteId = '5c19cb11-9497-4664-9737-91cf8d019b2b'
+        document.head.appendChild(script)
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
